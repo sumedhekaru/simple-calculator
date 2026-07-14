@@ -75,3 +75,7 @@
 - Reviewed `.gitignore` and added `.eas/build/` entry.
 - Committed all changes with message: "feat: complete calculator app with SDK 54, icons, bug fixes, and EAS config".
 - Pushed to `origin/main` at `github.com:sumedhekaru/simple-calculator.git`.
+
+### EAS Configuration
+- Ran `npx eas build:configure` and linked project to EAS project `8ce8e5e3-2a9c-45e5-b692-ba51378ef3fd`.
+- Committed and pushed updated `app.json` with EAS project ID.
