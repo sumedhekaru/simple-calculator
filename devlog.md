@@ -70,3 +70,8 @@
 - Installed `react-native-safe-area-context`.
 - Wrapped app in `SafeAreaProvider` and replaced outer `View` in `Calculator` with `SafeAreaView` using `edges={['bottom', 'left', 'right']}`.
 - Verified TypeScript and tests still pass.
+
+### Git Commit & Push
+- Reviewed `.gitignore` and added `.eas/build/` entry.
+- Committed all changes with message: "feat: complete calculator app with SDK 54, icons, bug fixes, and EAS config".
+- Pushed to `origin/main` at `github.com:sumedhekaru/simple-calculator.git`.
