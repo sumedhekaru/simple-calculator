@@ -74,3 +74,24 @@ npm run build:android:preview
 ```
 
 This builds an installable APK for internal testing.
+
+### Build Locally (Skip EAS Queue)
+
+If EAS cloud builds are queued too long, you can build on your Mac:
+
+```bash
+# One-time: prebuild native Android project
+npx expo prebuild --platform android
+
+# Build release AAB
+cd android
+./gradlew bundleRelease
+```
+
+The output AAB will be at:
+`android/app/build/outputs/bundle/release/app-release.aab`
+
+Requirements:
+- Android SDK command line tools
+- Java 17 (e.g. Eclipse Temurin)
+- Set `ANDROID_HOME` to your Android SDK path
