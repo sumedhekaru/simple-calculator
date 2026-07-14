@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Simple Calculator",
+    "slug": "simple-calculator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1c1c1c"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jarviskaru.calculator"
+    },
+    "android": {
+      "package": "com.jarviskaru.calculator",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#1c1c1c",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

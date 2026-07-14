@@ -7,8 +7,15 @@ Simple cross-platform calculator app built with **Expo + React Native (TypeScrip
 - **Framework**: Expo (React Native)
 - **Language**: TypeScript
 - **Testing**: Jest + React Native Testing Library (TDD)
-- **Styling**: React Native StyleSheet
-- **Deployment**: Expo EAS / native builds for Android & iOS
+- **Styling**: React Native StyleSheet with a clean light/dark-friendly theme
+- **Deployment**: Expo EAS / native builds for Android & iOS (optional final milestone)
+
+## Design & UX
+
+- Clean, modern calculator layout with large tap targets.
+- Light theme by default; structure styles to allow dark mode later.
+- Number formatting: limit decimal places, show `Error` for invalid results.
+- Button grid: digits 0–9, decimal, operators (+, −, ×, ÷), equals, clear.
 
 ## Milestones (Bite-Size)
 
@@ -18,9 +25,10 @@ Simple cross-platform calculator app built with **Expo + React Native (TypeScrip
 - Verify the app runs on iOS simulator and Android emulator.
 
 ### 2. Core Calculator Logic (TDD)
+- Define state shape: `currentInput`, `previousValue`, `operator`, `result`.
 - Write unit tests for `add`, `subtract`, `multiply`, `divide`, `clear`, `equals`, and `input` parsing.
 - Implement `calculator.ts` logic module to make tests pass.
-- Handle edge cases: division by zero, chained operations, decimal input.
+- Handle edge cases: division by zero, chained operations, decimal input, invalid transitions.
 
 ### 3. UI Components
 - Build `Button` component (reusable pressable button).
@@ -48,3 +56,4 @@ Simple cross-platform calculator app built with **Expo + React Native (TypeScrip
 - Keep changes small. One milestone at a time.
 - User will help with manual testing on devices.
 - No fancy features initially — basic arithmetic only.
+- Keep logic pure and separate from UI components for easier testing.

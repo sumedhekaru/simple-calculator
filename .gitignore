@@ -7,16 +7,21 @@ node_modules/
 .expo/
 dist/
 web-build/
+expo-env.d.ts
 
 # Native
+.kotlin/
 *.orig.*
 *.jks
 *.jceks
 *.keystore
 *.pem
 *.p12
+*.p8
 *.key
 *.mobileprovision
+/ios
+/android
 
 # Metro
 .metro-health-check*
@@ -36,6 +41,9 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# EAS
+.eas/build/
 
 # IDE
 .idea/
