@@ -1,4 +1,4 @@
-# Calculator
+# Simple Calculator
 
 A simple, good-looking calculator app built with **Expo + React Native (TypeScript)**.
 
@@ -8,6 +8,7 @@ A simple, good-looking calculator app built with **Expo + React Native (TypeScri
 - Decimal input and chained operations
 - Division-by-zero handling with `Error` display
 - Clean dark-themed UI with large tap targets
+- Safe area handling for iOS and Android system navigation bars
 
 ## Tech Stack
 
@@ -15,6 +16,7 @@ A simple, good-looking calculator app built with **Expo + React Native (TypeScri
 - React Native 0.81.5
 - TypeScript
 - Jest + ts-jest for unit tests
+- react-native-safe-area-context for safe area insets
 
 ## Getting Started
 
@@ -37,7 +39,9 @@ npm test
 src/
   components/      # Button, Display, Calculator screen
   logic/           # Pure calculator logic and tests
+  test/mocks/      # Jest mocks for native modules
 assets/            # App icons and splash images
+scripts/           # Icon generation script
 ```
 
 ## Building for Stores
