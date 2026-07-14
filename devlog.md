@@ -89,3 +89,10 @@
 - Created `android/local.properties` pointing to the Android SDK.
 - Built release AAB successfully with `./gradlew bundleRelease`.
 - Output: `android/app/build/outputs/bundle/release/app-release.aab`.
+
+### Play Store Signing Fix
+- Play Console rejected first AAB because it was signed with the debug keystore.
+- Generated release keystore at `android/app/release.keystore`.
+- Created `android/keystore.properties` and configured `android/app/build.gradle` to use release signing config.
+- Rebuilt AAB with release signing; verified with `jarsigner -verify`.
+- Updated README with keystore backup warning.

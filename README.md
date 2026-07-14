@@ -91,6 +91,8 @@ cd android
 The output AAB will be at:
 `android/app/build/outputs/bundle/release/app-release.aab`
 
+**Important:** keep your release keystore (`android/app/release.keystore`) and its password safe. If you lose it, you cannot publish updates to the Play Store.
+
 Requirements:
 - Android SDK command line tools
 - Java 17 (e.g. Eclipse Temurin)
