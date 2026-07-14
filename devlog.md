@@ -79,3 +79,13 @@
 ### EAS Configuration
 - Ran `npx eas build:configure` and linked project to EAS project `8ce8e5e3-2a9c-45e5-b692-ba51378ef3fd`.
 - Committed and pushed updated `app.json` with EAS project ID.
+- Removed local `eas-cli` dependency (per `expo-doctor` recommendation) and installed `eas-cli` globally.
+
+### Local Android Build Setup
+- Installed Android command line tools and Eclipse Temurin JDK 17 via Homebrew.
+- Set `ANDROID_HOME` and `JAVA_HOME` environment variables in `~/.zshrc`.
+- Installed Android SDK platform 36, build-tools 36.0.0, and NDK 27.1.12297006.
+- Ran `npx expo prebuild --platform android` to generate the native Android project.
+- Created `android/local.properties` pointing to the Android SDK.
+- Built release AAB successfully with `./gradlew bundleRelease`.
+- Output: `android/app/build/outputs/bundle/release/app-release.aab`.
