@@ -50,6 +50,14 @@ Generic guidelines for AI assistants working on software projects.
 - Do not commit generated files, secrets, or large binaries.
 - Push when a reasonable number of commits have accumulated or when a milestone is reached, rather than after every single commit.
 
+## Development History
+
+- Keep a running log of significant changes and decisions.
+- Record dates and times for milestones, fixes, and environment setup.
+- Summarize what was changed and why, not just file diffs.
+- Mention errors encountered and how they were resolved.
+- Use the history as a reference for future work and debugging.
+
 ## Security
 
 - Never commit secrets, API keys, passwords, or keystores.
