@@ -45,9 +45,10 @@ Generic guidelines for AI assistants working on software projects.
 ## Git Workflow
 
 - Check `git status` before committing.
-- Make focused commits with clear messages.
+- Make frequent, focused commits for small, complete changes.
+- Use clear, descriptive commit messages.
 - Do not commit generated files, secrets, or large binaries.
-- Push after committing unless asked otherwise.
+- Push when a reasonable number of commits have accumulated or when a milestone is reached, rather than after every single commit.
 
 ## Security
 
