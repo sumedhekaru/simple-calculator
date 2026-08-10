@@ -96,3 +96,12 @@
 - Created `android/keystore.properties` and configured `android/app/build.gradle` to use release signing config.
 - Rebuilt AAB with release signing; verified with `jarsigner -verify`.
 - Updated README with keystore backup warning.
+
+## 2026-08-09
+
+### App Store Submission Config
+- Added `ios.buildNumber` and `ios.infoPlist.ITSAppUsesNonExemptEncryption: false` to `app.json` so App Store Connect skips the export-compliance prompt on each build.
+- Added `cli.appVersionSource: "local"` to `eas.json`, required by recent EAS CLI versions and consistent with the existing local `versionCode` convention on Android.
+- Added `build:ios` and `submit:ios` npm scripts mirroring the existing Android ones.
+- Documented the App Store build/submit flow in `README.md`.
+- Noted a blocker to resolve before submitting: `assets/icon.png` is RGBA with transparent corners (from `scripts/generate-icons.py`'s rounded-square mask), but Apple requires the 1024x1024 App Store icon to be fully opaque with no alpha channel. Needs a flattened opaque version before the first iOS build.

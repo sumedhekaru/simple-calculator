@@ -50,6 +50,7 @@ scripts/           # Icon generation script
 
 - An Expo account (free at https://expo.dev/signup)
 - For Google Play Store: a Google Play Console account ($25 one-time fee)
+- For Apple App Store: an Apple Developer Program membership ($99/year)
 
 ### Configure EAS
 
@@ -74,6 +75,25 @@ npm run build:android:preview
 ```
 
 This builds an installable APK for internal testing.
+
+### Build iOS App for App Store
+
+```bash
+npm run build:ios
+```
+
+This uploads the build to EAS, builds a signed `.ipa`, and (on first run) prompts to generate or reuse an Apple Distribution certificate and provisioning profile. Before building:
+
+1. Create the app record in [App Store Connect](https://appstoreconnect.apple.com) using bundle ID `com.jarviskaru.calculator`.
+2. Make sure `assets/icon.png` is a fully opaque 1024x1024 PNG with no alpha channel — App Store Connect rejects icons with transparency.
+
+### Submit to App Store
+
+```bash
+npm run submit:ios
+```
+
+This uploads the latest EAS build to App Store Connect via `eas submit`. It will prompt for your Apple ID, App Store Connect App ID, and Apple Team ID the first time. After the upload finishes, fill in the listing (screenshots, description, privacy policy URL, age rating) in App Store Connect and submit for review.
 
 ### Build Locally (Skip EAS Queue)
 
