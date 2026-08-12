@@ -105,3 +105,9 @@
 - Added `build:ios` and `submit:ios` npm scripts mirroring the existing Android ones.
 - Documented the App Store build/submit flow in `README.md`.
 - Noted a blocker to resolve before submitting: `assets/icon.png` is RGBA with transparent corners (from `scripts/generate-icons.py`'s rounded-square mask), but Apple requires the 1024x1024 App Store icon to be fully opaque with no alpha channel. Needs a flattened opaque version before the first iOS build.
+
+### Marketing Folder
+- Created `marketing/` with App Store listing copy, privacy policy draft, App Privacy questionnaire answers, release notes, and a screenshots folder with required iOS device sizes.
+- `marketing/README.md` has the full submission checklist, including the iPad screenshots decision (`app.json` currently has `supportsTablet: true`, which pulls in a 13" iPad screenshot requirement).
+- `assets/icon.png` alpha-channel blocker noted last session is already resolved (found staged: flattened to opaque, 1024x1024, no alpha).
+- Several fields left as `TODO` pending user input: subtitle, promotional text, support URL, marketing URL, privacy policy hosting URL, copyright line, and pricing.

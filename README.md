@@ -46,6 +46,8 @@ scripts/           # Icon generation script
 
 ## Building for Stores
 
+See [`marketing/`](marketing/) for App Store listing copy, privacy policy, screenshot requirements, and the full submission checklist.
+
 ### Prerequisites
 
 - An Expo account (free at https://expo.dev/signup)
