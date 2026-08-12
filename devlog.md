@@ -111,3 +111,19 @@
 - `marketing/README.md` has the full submission checklist, including the iPad screenshots decision (`app.json` currently has `supportsTablet: true`, which pulls in a 13" iPad screenshot requirement).
 - `assets/icon.png` alpha-channel blocker noted last session is already resolved (found staged: flattened to opaque, 1024x1024, no alpha).
 - Several fields left as `TODO` pending user input: subtitle, promotional text, support URL, marketing URL, privacy policy hosting URL, copyright line, and pricing.
+
+## 2026-08-12
+
+### App Renamed
+- Renamed app from "Simple Calculator" to "Simple Best Calculator" everywhere (`app.json` display name, `README.md`, all `marketing/` docs) to match the name already registered in App Store Connect (the shorter name was unavailable).
+
+### iPad Layout Bug Fix
+- Found the calculator's number display was completely missing on iPad: `Button` sizes itself from row width via `aspectRatio: 1`, so on the much wider iPad screen the buttons grew into huge squares and pushed the display off the top of the screen.
+- Fixed by capping the keypad+display column at `maxWidth: 480` and centering it horizontally in `Calculator.tsx`. No effect on iPhone (already narrower than the cap). Verified visually on iPhone 17 Pro Max and iPad Pro 13" simulators; `tsc --noEmit` still clean.
+
+### Marketing & App Store Connect
+- Filled in all remaining `TODO`s in `marketing/app-store-listing.md` and `marketing/privacy-policy.md` (subtitle, promo text, support/privacy URLs, copyright, pricing).
+- Published privacy policy and support contact to a separate public repo: `github.com/lahirugmg/simple-best-cal-support`.
+- Captured App Store screenshots (default, chained calculation, division-by-zero error, result) for iPhone 6.9" and iPad 13" via iOS Simulator.
+- Filled in App Store Connect: screenshots, promotional text, description, keywords, support/privacy URLs, copyright, subtitle, category (Utilities), App Privacy questionnaire (published, no data collected), age rating (4+), pricing (Free, all regions), App Review contact info.
+- Still open: build upload (`eas build:ios` / `eas submit:ios`) and the final "Add for Review" submission — not run this session.

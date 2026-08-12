@@ -5,7 +5,7 @@ Field limits are Apple's current limits — App Store Connect will reject anythi
 ## App Name (30 characters max)
 
 ```
-Simple Calculator
+Simple Best Calculator
 ```
 
 ## Subtitle (30 characters max)
@@ -23,7 +23,7 @@ A clean, no-clutter calculator for everyday math — fast, distraction-free, and
 ## Description (4000 characters max)
 
 ```
-Simple Calculator is a clean, no-nonsense calculator for everyday math.
+Simple Best Calculator is a clean, no-nonsense calculator for everyday math.
 
 FEATURES
 - Basic arithmetic: addition, subtraction, multiplication, division
@@ -32,7 +32,7 @@ FEATURES
 - Clean, dark-themed interface with large, easy-to-tap buttons
 - No ads, no tracking, no account required
 
-Simple Calculator does exactly what it says: it calculates. No clutter, no permissions, no data collection — just a fast, reliable calculator whenever you need one.
+Simple Best Calculator does exactly what it says: it calculates. No clutter, no permissions, no data collection — just a fast, reliable calculator whenever you need one.
 ```
 
 ## Keywords (100 characters max, comma-separated, no spaces needed after commas)

@@ -1,4 +1,4 @@
-# Simple Calculator
+# Simple Best Calculator
 
 A simple, good-looking calculator app built with **Expo + React Native (TypeScript)**.
 

@@ -1,12 +1,12 @@
-# Privacy Policy — Simple Calculator
+# Privacy Policy — Simple Best Calculator
 
 **Last updated: August 11, 2026**
 
-Simple Calculator ("the App") is developed by Lahiru Gamage.
+Simple Best Calculator ("the App") is developed by Lahiru Gamage.
 
 ## Data Collection
 
-Simple Calculator does not collect, store, or transmit any personal data. The App:
+Simple Best Calculator does not collect, store, or transmit any personal data. The App:
 
 - Does not require an account or sign-in.
 - Does not access the internet or send data to any server.
@@ -17,11 +17,11 @@ All calculations happen entirely on your device and are never saved or shared.
 
 ## Third-Party Services
 
-Simple Calculator does not integrate with any third-party services, SDKs, or APIs.
+Simple Best Calculator does not integrate with any third-party services, SDKs, or APIs.
 
 ## Children's Privacy
 
-Simple Calculator does not collect any data from anyone, including children under 13.
+Simple Best Calculator does not collect any data from anyone, including children under 13.
 
 ## Changes to This Policy
 

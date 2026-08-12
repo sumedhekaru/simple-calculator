@@ -1,6 +1,6 @@
 # Marketing & App Store Submission
 
-Everything needed to list **Simple Calculator** on the Apple App Store lives here. Fill in the blanks marked `TODO`, then copy the final values into App Store Connect when creating the version for submission.
+Everything needed to list **Simple Best Calculator** on the Apple App Store lives here. Fill in the blanks marked `TODO`, then copy the final values into App Store Connect when creating the version for submission.
 
 ## Files
 

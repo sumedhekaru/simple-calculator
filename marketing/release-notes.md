@@ -5,5 +5,5 @@ App Store Connect requires this text on every new version submission (2500 chara
 ## 1.0.0 (initial release)
 
 ```
-Initial release of Simple Calculator — a clean, fast calculator for everyday math with basic arithmetic, decimal input, and chained operations.
+Initial release of Simple Best Calculator — a clean, fast calculator for everyday math with basic arithmetic, decimal input, and chained operations.
 ```

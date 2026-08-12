@@ -8,7 +8,7 @@ Apple requires this "Data collection" questionnaire in App Store Connect for eve
 No, we do not collect data from this app.
 ```
 
-That single answer covers it — Simple Calculator has no network calls, no analytics, no ads, no crash reporting SDK, and stores nothing outside the device. If any of those are added later (e.g. a crash reporter), this file and the App Store Connect answers must be updated to declare the relevant data types (e.g. Diagnostics → Crash Data) before the next submission.
+That single answer covers it — Simple Best Calculator has no network calls, no analytics, no ads, no crash reporting SDK, and stores nothing outside the device. If any of those are added later (e.g. a crash reporter), this file and the App Store Connect answers must be updated to declare the relevant data types (e.g. Diagnostics → Crash Data) before the next submission.
 
 ## Reference: data types Apple asks about (for future changes)
 
