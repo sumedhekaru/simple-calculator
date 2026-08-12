@@ -35,47 +35,49 @@ export function Calculator() {
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom', 'left', 'right']}>
-      <View style={styles.displayContainer}>
-        <Display value={state.display} />
-      </View>
-
-      <View style={styles.keypad}>
-        <View style={styles.row}>
-          {renderButton('C', handleClear, 'clear')}
-          {renderButton('÷', () => handleOperator('/'), 'operator')}
-          {renderButton('×', () => handleOperator('*'), 'operator')}
-          {renderButton('−', () => handleOperator('-'), 'operator')}
+      <View style={styles.content}>
+        <View style={styles.displayContainer}>
+          <Display value={state.display} />
         </View>
 
-        <View style={styles.row}>
-          {renderButton('7', () => handleInput('7'))}
-          {renderButton('8', () => handleInput('8'))}
-          {renderButton('9', () => handleInput('9'))}
-          {renderButton('+', () => handleOperator('+'), 'operator')}
-        </View>
-
-        <View style={styles.body}>
-          <View style={styles.bodyLeft}>
-            <View style={styles.row}>
-              {renderButton('4', () => handleInput('4'))}
-              {renderButton('5', () => handleInput('5'))}
-              {renderButton('6', () => handleInput('6'))}
-            </View>
-
-            <View style={styles.row}>
-              {renderButton('1', () => handleInput('1'))}
-              {renderButton('2', () => handleInput('2'))}
-              {renderButton('3', () => handleInput('3'))}
-            </View>
-
-            <View style={styles.row}>
-              {renderButton('0', () => handleInput('0'))}
-              {renderButton('.', () => handleInput('.'))}
-            </View>
+        <View style={styles.keypad}>
+          <View style={styles.row}>
+            {renderButton('C', handleClear, 'clear')}
+            {renderButton('÷', () => handleOperator('/'), 'operator')}
+            {renderButton('×', () => handleOperator('*'), 'operator')}
+            {renderButton('−', () => handleOperator('-'), 'operator')}
           </View>
 
-          <View style={styles.bodyRight}>
-            {renderButton('=', handleEquals, 'equals', true)}
+          <View style={styles.row}>
+            {renderButton('7', () => handleInput('7'))}
+            {renderButton('8', () => handleInput('8'))}
+            {renderButton('9', () => handleInput('9'))}
+            {renderButton('+', () => handleOperator('+'), 'operator')}
+          </View>
+
+          <View style={styles.body}>
+            <View style={styles.bodyLeft}>
+              <View style={styles.row}>
+                {renderButton('4', () => handleInput('4'))}
+                {renderButton('5', () => handleInput('5'))}
+                {renderButton('6', () => handleInput('6'))}
+              </View>
+
+              <View style={styles.row}>
+                {renderButton('1', () => handleInput('1'))}
+                {renderButton('2', () => handleInput('2'))}
+                {renderButton('3', () => handleInput('3'))}
+              </View>
+
+              <View style={styles.row}>
+                {renderButton('0', () => handleInput('0'))}
+                {renderButton('.', () => handleInput('.'))}
+              </View>
+            </View>
+
+            <View style={styles.bodyRight}>
+              {renderButton('=', handleEquals, 'equals', true)}
+            </View>
           </View>
         </View>
       </View>
@@ -87,6 +89,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1c1c1c',
+    alignItems: 'center',
+  },
+  content: {
+    flex: 1,
+    width: '100%',
+    // Caps the keypad's width on large screens (iPad) so buttons — which
+    // size themselves from row width via aspectRatio: 1 — don't grow into
+    // huge squares that push the display off the top of the screen.
+    maxWidth: 480,
   },
   displayContainer: {
     flex: 1,
