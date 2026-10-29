@@ -1,81 +1,109 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { colors } from './theme';
+
+export type KeyVariant = 'digit' | 'function' | 'operator' | 'equals';
 
 interface ButtonProps {
   label: string;
   onPress: () => void;
-  variant?: 'default' | 'operator' | 'equals' | 'clear';
-  tall?: boolean;
+  variant?: KeyVariant;
+  accessibilityLabel?: string;
+  active?: boolean;
+  lastColumn?: boolean;
+  lastRow?: boolean;
 }
 
 export function Button({
   label,
   onPress,
-  variant = 'default',
-  tall = false,
+  variant = 'digit',
+  accessibilityLabel,
+  active = false,
+  lastColumn = false,
+  lastRow = false,
 }: ButtonProps) {
   return (
     <Pressable
       style={({ pressed }) => [
-        styles.button,
+        styles.key,
         styles[variant],
-        tall && styles.tall,
-        pressed && styles.pressed,
+        lastColumn && styles.lastColumn,
+        lastRow && styles.lastRow,
+        pressed && (variant === 'equals' ? styles.equalsPressed : styles.pressed),
       ]}
       onPress={onPress}
       testID={`button-${label}`}
-      accessibilityLabel={label}
+      accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel ?? label}
+      accessibilityState={{ selected: active }}
     >
-      <Text style={[styles.text, variant !== 'default' && styles[`${variant}Text`]]}>{label}</Text>
+      <Text style={[styles.text, styles[`${variant}Text`]]}>{label}</Text>
+      {active && <View style={styles.activeMarker} />}
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  default: {},
-  defaultText: {},
-  button: {
+  key: {
     flex: 1,
-    aspectRatio: 1,
-    margin: 6,
-    borderRadius: 20,
+    aspectRatio: 1.3,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#f0f0f0',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 2,
+    borderRightWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.rule,
   },
-  tall: {
-    aspectRatio: undefined,
-    alignSelf: 'stretch',
+  lastColumn: {
+    borderRightWidth: 0,
   },
-  pressed: {
-    opacity: 0.7,
+  lastRow: {
+    borderBottomWidth: 0,
   },
-  text: {
-    fontSize: 28,
-    fontWeight: '600',
-    color: '#333',
+  digit: {
+    backgroundColor: colors.paper,
+  },
+  function: {
+    backgroundColor: colors.functionKey,
   },
   operator: {
-    backgroundColor: '#ff9f0a',
-  },
-  operatorText: {
-    color: '#fff',
+    backgroundColor: colors.operatorKey,
   },
   equals: {
-    backgroundColor: '#ff9f0a',
+    backgroundColor: colors.ink,
+  },
+  pressed: {
+    backgroundColor: colors.rule,
+  },
+  equalsPressed: {
+    backgroundColor: colors.inkSoft,
+  },
+  text: {
+    fontSize: 26,
+    fontWeight: '500',
+    color: colors.ink,
+    fontVariant: ['tabular-nums'],
+  },
+  digitText: {},
+  functionText: {
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  operatorText: {
+    fontSize: 30,
+    fontWeight: '400',
   },
   equalsText: {
-    color: '#fff',
+    fontSize: 30,
+    color: colors.paper,
   },
-  clear: {
-    backgroundColor: '#a5a5a5',
-  },
-  clearText: {
-    color: '#fff',
+  activeMarker: {
+    position: 'absolute',
+    left: '30%',
+    right: '30%',
+    bottom: 10,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: colors.accent,
   },
 });

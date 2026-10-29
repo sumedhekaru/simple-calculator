@@ -7,7 +7,8 @@ A simple, good-looking calculator app built with **Expo + React Native (TypeScri
 - Basic arithmetic: addition, subtraction, multiplication, division
 - Decimal input and chained operations
 - Division-by-zero handling with `Error` display
-- Clean dark-themed UI with large tap targets
+- Paper-tape history of every calculation, plus percent, delete (⌫) and ± keys
+- Cream-and-ink "paper tape" design with flat, large tap targets
 - Safe area handling for iOS and Android system navigation bars
 
 ## Tech Stack

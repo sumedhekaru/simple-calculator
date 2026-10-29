@@ -127,3 +127,11 @@
 - Captured App Store screenshots (default, chained calculation, division-by-zero error, result) for iPhone 6.9" and iPad 13" via iOS Simulator.
 - Filled in App Store Connect: screenshots, promotional text, description, keywords, support/privacy URLs, copyright, subtitle, category (Utilities), App Privacy questionnaire (published, no data collected), age rating (4+), pricing (Free, all regions), App Review contact info.
 - Still open: build upload (`eas build:ios` / `eas submit:ios`) and the final "Add for Review" submission — not run this session.
+
+## 2026-10-27 22:40
+
+### Paper Tape redesign (App Review 5.2.5)
+- Replaced the Apple-Calculator-like look (orange `#ff9f0a`, grey `#a5a5a5`, `#1c1c1c`) with a cream-and-ink "paper tape" design: `src/components/theme.ts`, new `Tape.tsx`, rewritten `Display.tsx`, `Button.tsx` and `Calculator.tsx`.
+- Logic: running tape of finished calculations (capped at 100), plus backspace, percent (of running total for + and −) and change-sign; display grouping with thousands separators. Tests added in `calculator.test.ts`.
+- New receipt icon via `scripts/generate-icons.py`; splash background `#F6F1E7`; build number 2 (iOS) / versionCode 2 (Android).
+- Store copy and review notes updated (`marketing/`, `docs/app-review-notes.md`).
