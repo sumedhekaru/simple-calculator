@@ -103,3 +103,40 @@ against `src/logic/calculator.ts`).
 - [ ] Decide on `ios.supportsTablet` in `app.json` — it's currently `true`
       but no iPad screenshots exist yet (see `marketing/screenshots/README.md`).
       Either add iPad screenshots or set `supportsTablet: false`.
+
+## Resubmission after Guideline 5.2.5 rejection (Aug 19, 2026)
+
+Apple: "The app is too similar to Calculator, which creates a misleading
+association with Apple." Build 1 used Apple Calculator's exact colours
+(`#ff9f0a` orange operators, `#a5a5a5` grey clear key, `#1c1c1c` near-black
+background), its key grid, and an orange "=" icon on black.
+
+Build 2 is a full redesign ("Paper Tape"):
+
+- Light cream paper background (`#F6F1E7`) with ink-blue text (`#1F3A5F`) and
+  a teal accent (`#2A9D8F`). None of Apple Calculator's colours are used.
+- A scrolling paper tape at the top that records every finished calculation
+  (e.g. `12.5 × 4 = 50`), with a "Clear tape" action.
+- Flat rectangular tiles separated by hairline rules, in a 4 × 5 grid with its
+  own layout: AC / ⌫ / % / ÷ on top, `0 . ± =` on the bottom row. No round
+  or pill-shaped keys.
+- New functions: delete (⌫), percent (%), change sign (±) and thousands
+  separators.
+- New icon: a cream paper receipt on an ink-blue background.
+
+### Paste into "Reply to App Review"
+
+> Thank you for the feedback. We have redesigned the app so it no longer
+> resembles Apple's Calculator:
+>
+> - New visual identity: a light cream "paper" background with ink-blue text
+>   and a teal accent, replacing the dark background and orange/grey keys.
+> - New layout: a scrolling paper tape at the top records every calculation,
+>   and the keypad uses flat rectangular tiles separated by thin rules, in a
+>   different key arrangement.
+> - New features: calculation history (paper tape), delete, percent and
+>   change-sign keys, and thousands separators.
+> - New app icon: a paper receipt on an ink-blue background.
+>
+> Build 1.0.0 (2) contains these changes, and the screenshots have been
+> updated to match.
